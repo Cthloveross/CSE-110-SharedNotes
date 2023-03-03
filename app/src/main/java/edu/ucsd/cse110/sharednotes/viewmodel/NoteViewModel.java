@@ -27,14 +27,18 @@ public class NoteViewModel extends AndroidViewModel {
         // The returned live data should update whenever there is a change in
         // the database, or when the server returns a newer version of the note.
         // Polling interval: 3s.
+
+        if (!repo.existsLocal(title)) {
+            repo.getSynced(title);
+        }
         if (note == null) {
-            note = repo.getLocal(title);
+            note = repo.getSynced(title);
         }
         return note;
     }
 
     public void save(Note note) {
         // TODO: try to upload the note to the server.
-        repo.upsertLocal(note);
+        repo.upsertSynced(note);
     }
 }
