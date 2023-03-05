@@ -36,7 +36,7 @@ public class NoteActivity extends AppCompatActivity {
 
         var viewModel = setupViewModel();
         note = viewModel.getNote(title);
-        
+
         // Set up the toolbar.
         setupToolbar(title);
 

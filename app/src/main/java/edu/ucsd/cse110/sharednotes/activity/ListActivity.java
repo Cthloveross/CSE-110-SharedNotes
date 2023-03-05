@@ -34,7 +34,6 @@ import edu.ucsd.cse110.sharednotes.viewmodel.ListViewModel;
  * direct method calls. - The dotted lines represent indirect relationships. - Can indirectly
  * trigger behavior through a callback or observer.
  * <p>
-
  * ──Activity ╶╶(observes events on)╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╮    [Presenter - Behavior]
  *   │                                                    ╎
  *   ├──(calls)────→ Repository ←╶╶╶╶╶╮                   ╎    [Model]
@@ -62,7 +61,7 @@ import edu.ucsd.cse110.sharednotes.viewmodel.ListViewModel;
  *         responsible for converting the data into a format that the RecyclerView can understand,
  *         so in some sense it's a "mini-Presenter" that mediates between the RecyclerView and the
  *         Activity.
- *
+ *z
  * Due to Android quirks, we don't exactly have a clean MVP architecture. The Presenter
  * and ViewModel *both* play the role of Presenter, as they both mediate between the View and the
  * Model.
